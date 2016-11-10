@@ -22,27 +22,34 @@ MAX_IDLE_TIME = 5400000        # max idle time, currently 90 minutes.
 
 
 def Welcome(ts3conn): 
-    while True:
-        time.sleep(2)       
-        clientlist = ts3conn.clientlist()
-        clientlist =  [client for client in clientlist \
-                       if client["client_type"] != "1"]         
-     
-        for client in clientlist:            
-            clid = client['clid']
-            info = ts3conn.clientinfo(clid=clid)
-            for ino in info:
-                try:
-                    time.sleep(1)
-                    if (int(ino['client_idle_time'])) > (int(MAX_IDLE_TIME)):
-                        ts3conn.clientmove(clid=clid, cid=cid)
-                        #ts3conn.clientmove(clid=clid, msg=msg)               Also Poke AFK client
-                        print ('Client Moved AFK')
-                
-                except ts3.query.TS3QueryError as err:
-                    if err.resp.error["id"] != "770" or err.resp.error["id"] != "512":  # Stops client already in channel error
-                        raise  
+        while True:
+        try:
+            time.sleep(2)       
+            clientlist = ts3conn.clientlist()
+            clientlist =  [client for client in clientlist \
+                           if client["client_type"] != "1"]     
+            
+            for client in clientlist:            
+                clid = client['clid']
+                info = ts3conn.clientinfo(clid=clid)
+                for ino in info:
+                    try:
+                        time.sleep(1)
+                        if (int(ino['client_idle_time'])) > (int(MAX_IDLE_TIME)):
+                            ts3conn.clientmove(clid=clid, cid=cid)
+                            #ts3conn.clientmove(clid=clid, msg=msg)               Also Poke AFK client
+                            print ('Client Moved AFK')
 
+                    except ts3.query.TS3QueryError as err:
+                        if err.resp.error["id"]:
+                            continue 
+
+                
+        except ts3.query.TS3QueryError as err:
+            if err.resp.error["id"]:
+                continue
+                
+                
 def main():
     with ts3.query.TS3Connection(HOST,PORT) as ts3conn:
         ts3conn.login(client_login_name=USER, client_login_password=PASS)
