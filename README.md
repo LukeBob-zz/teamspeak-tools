@@ -7,7 +7,7 @@
  
  **To run:***
  
- ``` python3 afk-bot.py ```
+ *``` python3 afk-bot.py or chmod 755 afk-bot.py && ./afk-bot.py ```*
 
 
 
