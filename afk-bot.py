@@ -4,7 +4,7 @@
 #
 # teamspeak AFK bot, moves afk clients to a specified channel
 #
-# uses Benedikt Schmitt's ts3 api in conjunction with ts3 query. to find out more visit https://github.com/benediktschmitt/py-ts3
+# uses "Benedikt Schmitt's" ts3 api in conjunction with ts3 query. to find out more visit https://github.com/benediktschmitt/py-ts3
 
 import sys
 import time
