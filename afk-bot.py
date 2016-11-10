@@ -11,14 +11,14 @@ import time
 import ts3
 import ts3.definitions
 
-msg           = 'AFK TOO LONG!'           # Poke message, only if you enable poke by uncommenting it in the loop.
+msg           = 'AFK TOO LONG!'          # Poke message, only if you enable poke by uncommenting it in the loop.
 cid           = 5                        # Channel "cid" to move AFK clients to
 USER          = 'serveradmin'            # server username
 PASS          = ''                       # server password
 HOST          = 'localhost'              # server host
 PORT          = '10011'                  # server port
 SID           = 1                        # leave this
-MAX_IDLE_TIME = 5400000        # max idle time, currently 90 minutes.
+MAX_IDLE_TIME = 5400000                  # max idle time, currently 90 minutes.
 
 
 def Welcome(ts3conn): 
