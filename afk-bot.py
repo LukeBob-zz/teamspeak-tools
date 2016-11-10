@@ -40,7 +40,7 @@ def Welcome(ts3conn):
                         print ('Client Moved AFK')
                 
                 except ts3.query.TS3QueryError as err:
-                    if err.resp.error["id"] != "770" and err.resp.error["id"] != "512":  # Stops client already in channel error
+                    if err.resp.error["id"] != "770" or err.resp.error["id"] != "512":  # Stops client already in channel error
                         raise  
 
 def main():
