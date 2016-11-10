@@ -18,7 +18,7 @@ PASS          = ''                       # server password
 HOST          = 'localhost'              # server host
 PORT          = '10011'                  # server port
 SID           = 1                        # leave this
-MAX_IDLE_TIME = 5400000                  # max idle time, currently 90 minutes.
+MAX_IDLE_TIME = 2700000                  # max idle time, currently 45 minutes.
 
 
 def Welcome(ts3conn): 
