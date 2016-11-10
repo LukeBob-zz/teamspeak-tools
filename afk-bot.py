@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-
 # Author: LukeBob
 #
 # teamspeak AFK bot, moves afk clients to a specified channel
