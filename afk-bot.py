@@ -1,16 +1,13 @@
 #!/usr/bin/python3
 
-
 # Author: LukeBob
-#
+# Requires pip3 install ts3
 # teamspeak AFK bot, moves afk clients to a specified channel
 
-import sys
-import time
-import ts3
+import sys, time, ts3
 import ts3.definitions
 
-minutes       = 10                         # Max idle time minutes (This is where to set your max idle time)                 
+minutes       = 45                         # Max idle time minutes (This is where to set your max idle time)                 
 cid           = 5                          # Channel "cid" to move AFK clients to (Look up your list of channels to get id)
 USER          = 'serveradmin'              # server username
 PASS          = ''                         # server password
@@ -23,7 +20,7 @@ MAX_IDLE_TIME = (int(minutes) * 1000 * 60) # max idle time, miliseconds (leave t
 def Welcome(ts3conn): 
     while True:
         try:
-            time.sleep(2)       
+            time.sleep(10)       
             clientlist = ts3conn.clientlist()
             clientlist =  [client for client in clientlist \
                            if client["client_type"] != "1"]
