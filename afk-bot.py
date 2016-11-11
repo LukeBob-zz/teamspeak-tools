@@ -1,34 +1,33 @@
 #!/usr/bin/python3
 
+
 # Author: LukeBob
 #
 # teamspeak AFK bot, moves afk clients to a specified channel
-#
-# uses Benedikt Schmitt's ts3 api in conjunction with ts3 query. to find out more visit https://github.com/benediktschmitt/py-ts3
 
 import sys
 import time
 import ts3
 import ts3.definitions
 
-msg           = 'AFK TOO LONG!'          # Poke message, only if you enable poke by uncommenting it in the loop.
-cid           = 5                        # Channel "cid" to move AFK clients to
+minutes       = 10                       # Max idle time minutes (This is where to set your max idle time)                 
+cid           = 5                        # Channel "cid" to move AFK clients to (Look up your list of channels to get id)
 USER          = 'serveradmin'            # server username
 PASS          = ''                       # server password
 HOST          = 'localhost'              # server host
 PORT          = '10011'                  # server port
-SID           = 1                        # leave this
-MAX_IDLE_TIME = 2700000                  # max idle time, currently 45 minutes.
+SID           = 1                        # admin-sid (leave this)
+MAX_IDLE_TIME = int(minutes) * 1000 * 60 # max idle time, miliseconds (leave this)
 
 
 def Welcome(ts3conn): 
-        while True:
+    while True:
         try:
             time.sleep(2)       
             clientlist = ts3conn.clientlist()
             clientlist =  [client for client in clientlist \
-                           if client["client_type"] != "1"]     
-            
+                           if client["client_type"] != "1"]
+
             for client in clientlist:            
                 clid = client['clid']
                 info = ts3conn.clientinfo(clid=clid)
@@ -36,9 +35,11 @@ def Welcome(ts3conn):
                     try:
                         time.sleep(1)
                         if (int(ino['client_idle_time'])) > (int(MAX_IDLE_TIME)):
+                            msg = ('Client: '+client['client_nickname']+' Got Moved Reason: AFK TOO LONG!')
                             ts3conn.clientmove(clid=clid, cid=cid)
+                            ts3conn.gm(msg=msg)
                             #ts3conn.clientmove(clid=clid, msg=msg)               Also Poke AFK client
-                            print ('Client Moved AFK')
+                            print ('Client '+client['client_nickname']+' Moved: AFK', )
 
                     except ts3.query.TS3QueryError as err:
                         if err.resp.error["id"]:
@@ -47,9 +48,8 @@ def Welcome(ts3conn):
                 
         except ts3.query.TS3QueryError as err:
             if err.resp.error["id"]:
-                continue
-                
-                
+                continue  
+
 def main():
     with ts3.query.TS3Connection(HOST,PORT) as ts3conn:
         ts3conn.login(client_login_name=USER, client_login_password=PASS)
