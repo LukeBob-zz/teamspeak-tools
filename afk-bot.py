@@ -10,14 +10,14 @@ import time
 import ts3
 import ts3.definitions
 
-minutes       = 10                       # Max idle time minutes (This is where to set your max idle time)                 
-cid           = 5                        # Channel "cid" to move AFK clients to (Look up your list of channels to get id)
-USER          = 'serveradmin'            # server username
-PASS          = ''                       # server password
-HOST          = 'localhost'              # server host
-PORT          = '10011'                  # server port
-SID           = 1                        # admin-sid (leave this)
-MAX_IDLE_TIME = int(minutes) * 1000 * 60 # max idle time, miliseconds (leave this)
+minutes       = 10                         # Max idle time minutes (This is where to set your max idle time)                 
+cid           = 5                          # Channel "cid" to move AFK clients to (Look up your list of channels to get id)
+USER          = 'serveradmin'              # server username
+PASS          = ''                         # server password
+HOST          = 'localhost'                # server host
+PORT          = '10011'                    # server port
+SID           = 1                          # admin-sid (leave this)
+MAX_IDLE_TIME = (int(minutes) * 1000 * 60) # max idle time, miliseconds (leave this)
 
 
 def Welcome(ts3conn): 
