@@ -17,6 +17,6 @@
  
  **To run**
  
- ***``` ./pokebot.py Luke 10 message | 'This is my multi string message in quotes' ```***
+ ***``` ./pokebot.py Luke 10 'This is my multi string message in quotes' ```***
 
 
