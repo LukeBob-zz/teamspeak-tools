@@ -15,7 +15,7 @@
  **Pokebot takes 3 arguments, 'name of target', 'num of times', 'message', it will then connect to the ts3 server and 
  look for the specified target when found it will begin to poke the shit out of the target.**
  
- **To run**
+ **To run:**
  
  ***``` ./pokebot.py <target name> <times to poke> <'message wrapped in quotes'> ```***
 
