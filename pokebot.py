@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 #
 # Author: Luke
-
+#
+# Pokebot for teamspeak3, Pokes any client [n] ammount of times with a custom message
 import time, ts3, sys, traceback
 
 USER = 'serveradmin' # Query user
