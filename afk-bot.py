@@ -38,14 +38,19 @@ def Welcome(ts3conn):
                             #ts3conn.clientmove(clid=clid, msg=msg)               Also Poke AFK client
                             print ('Client '+client['client_nickname']+' Moved: AFK', )
 
-                    except ts3.query.TS3QueryError as err:
-                        if err.resp.error["id"]:
-                            continue 
+                    except KeyboardInterrupt:
+                        print ('\nExiting...\n')
+                        sys.exit(0)
+                    except:
+                        pass
 
                 
-        except ts3.query.TS3QueryError as err:
-            if err.resp.error["id"]:
-                continue  
+
+        except KeyboardInterrupt:
+            print ('\nExiting...\n')
+            sys.exit(0)
+        except:
+            pass  
 
 def main():
     with ts3.query.TS3Connection(HOST,PORT) as ts3conn:
