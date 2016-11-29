@@ -18,6 +18,7 @@ MAX_IDLE_TIME = (int(minutes) * 1000 * 60) # max idle time, miliseconds (leave t
 
 
 def Welcome(ts3conn): 
+    print ('\n      AFK-BOT: Connected to host: %s:%s\n      Max-afk-time: %s Minutes\n'%(HOST,PORT,str(minutes)))
     while True:
         try:
             time.sleep(10)       
