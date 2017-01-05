@@ -13,11 +13,10 @@ user       = 'serveradmin'  # server query password
 password   = ''             # server query user
 host       = ''             # server query host
 port       = 10011          # server query port
-
 interval   = 600            # Joke, insult interval - (seconds)
+jokelist   = ''             # path to joke-list, insult list
 
 insultList = []
-jokelist   = ''             # path to joke-list, insult list
 
 
 def SendInsult(Joke, ts3conn):
