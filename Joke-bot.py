@@ -20,8 +20,6 @@ insultList = []
 jokelist   = ''             # path to joke-list, insult list
 
 
-
-
 def SendInsult(Joke, ts3conn):
     if Joke:
         try:
@@ -32,7 +30,6 @@ def SendInsult(Joke, ts3conn):
     
         except ts3.query.TS3QueryError as err:
             print('\nSending Failed with error message -', err.resp.error['msg'])
-
 
 
 def getJokes(jokelist):
