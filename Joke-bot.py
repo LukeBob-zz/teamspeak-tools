@@ -23,7 +23,7 @@ def SendInsult(Joke, ts3conn):
     if Joke:
         try:
             print('Sending joke ...')
-            ts3conn.gm(msg=Joke)
+            ts3conn.gm(msg=Joke)               # sends next joke
             print('Joke sent Successfully')
         
     
@@ -35,7 +35,7 @@ def getJokes(jokelist):
     myfile = Path(jokelist)
 
     if myfile.is_file:
-        with open (jokelist, 'r') as file:
+        with open (jokelist, 'r') as file:    # appends jokes to insultList ready to be sent 
             for line in file:
                 lines = file.readline()
                 insultList.append(lines)
