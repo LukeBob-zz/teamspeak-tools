@@ -68,7 +68,7 @@ def main():
             SendInsult(insult, ts3conn)
             if insult in insultList: insultList.remove(insult)  # removes used joke, insult
             time.sleep(interval)
-            print('Next insult in 5 minutes')
+            print('Next insult in %s Seconds'%(interval))
         exit(0)
 
 if __name__ == '__main__':
