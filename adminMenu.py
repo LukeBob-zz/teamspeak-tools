@@ -1,6 +1,8 @@
 
 #!/usr/bin/python3
-
+#
+# Small Admin menu for Teamspeak 3, Requires ts3 module. "use pip3 install ts3"  
+#
 # Author: LukeBob
 
 import argparse
