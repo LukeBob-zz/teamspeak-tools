@@ -62,8 +62,6 @@ def options():
     print(col.FAIL+col.BOLD+r'''             Quit
              ----'''+'\n'+col.ENDC)
 
-
-
 def timeFormat(millsec):
     seconds = (millsec/1000)%60
     seconds = int(seconds)
