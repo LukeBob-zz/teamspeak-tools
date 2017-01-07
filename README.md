@@ -45,7 +45,7 @@ Requires host, port, user and password to run**
       --user USER, -u USER  Username to connect
       --password PASSWORD, -v PASSWORD   password to connect  
   
-** Example **
+**Example**
  
      ./adminMenu.py --host ts3.myserver.com --port 10011 --user serveradmin --password mySecretPassword 
               
