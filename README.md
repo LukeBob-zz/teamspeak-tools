@@ -7,7 +7,7 @@
  
  **Usage**
  
-     ***``` python3 afk-bot.py or chmod 755 afk-bot.py && ./afk-bot.py ```***
+     python3 afk-bot.py or chmod 755 afk-bot.py && ./afk-bot.py 
 
 
 ## Pokebot.py
@@ -17,7 +17,7 @@
  
  **Usage**
  
-     ***``` ./pokebot.py <target name> <times to poke> <'message wrapped in quotes'> ```***
+     ./pokebot.py <target name> <times to poke> <'message wrapped in quotes'> 
  
 ## Jokebot.py
  
@@ -34,7 +34,7 @@ Requires host, port, user and password to run**
  
 **Usage**
  
-    ``` usage: adminMenu.py [-h] [--host HOST] [--port PORT] [--user USER] [--password PASSWORD]
+     usage: adminMenu.py [-h] [--host HOST] [--port PORT] [--user USER] [--password PASSWORD]
                    
     Admin pannel for Teamspeak-3
 
@@ -43,11 +43,11 @@ Requires host, port, user and password to run**
       --host HOST, -s HOST  Server to connect to.
       --port PORT, -p PORT  Server port to connect to.
       --user USER, -u USER  Username to connect
-      --password PASSWORD, -v PASSWORD   password to connect  ```***
+      --password PASSWORD, -v PASSWORD   password to connect  
   
  ** Example **
  
-     ***``` ./adminMenu.py --host ts3.myserver.com --port 10011 --user serveradmin --password mySecretPassword ```***
+     ./adminMenu.py --host ts3.myserver.com --port 10011 --user serveradmin --password mySecretPassword 
               
         
 
