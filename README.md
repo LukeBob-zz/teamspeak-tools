@@ -34,16 +34,16 @@ Requires host, port, user and password to run**
  
 **Usage**
  
-***``` usage: adminMenu.py [-h] [--host HOST] [--port PORT] [--user USER] [--password PASSWORD]
+    ***``` usage: adminMenu.py [-h] [--host HOST] [--port PORT] [--user USER] [--password PASSWORD]
                    
-Admin pannel for Teamspeak-3
+    Admin pannel for Teamspeak-3
 
-optional arguments:
-  -h, --help            show this help message and exit
-  --host HOST, -s HOST  Server to connect to.
-  --port PORT, -p PORT  Server port to connect to.
-  --user USER, -u USER  Username to connect
-  --password PASSWORD, -v PASSWORD   password to connect  ```***
+    optional arguments:
+      -h, --help            show this help message and exit
+      --host HOST, -s HOST  Server to connect to.
+      --port PORT, -p PORT  Server port to connect to.
+      --user USER, -u USER  Username to connect
+      --password PASSWORD, -v PASSWORD   password to connect  ```***
   
  ** Example **
  
