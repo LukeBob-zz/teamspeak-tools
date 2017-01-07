@@ -17,22 +17,22 @@
  
  **Usage**
  
- ***``` ./pokebot.py <target name> <times to poke> <'message wrapped in quotes'> ```***
+***``` ./pokebot.py <target name> <times to poke> <'message wrapped in quotes'> ```***
  
- ## Jokebot.py
+## Jokebot.py
  
- **Give it a lits of comments or jokes to read from and set it off, the bot will read through the jokes/comments
- at random untill it has read every one.**
+**Give it a lits of comments or jokes to read from and set it off, the bot will read through the jokes/comments
+at random untill it has read every one.**
  
- **Usage**
+**Usage**
  
  
- ## adminMenu.py
+## adminMenu.py
  
- **Small admin menu for simple task's like banning, kicking, moving, messaging etc.
- Requires host, port, user and password to run**
+**Small admin menu for simple task's like banning, kicking, moving, messaging etc.
+Requires host, port, user and password to run**
  
- **Usage**
+**Usage**
  
 ***``` usage: adminMenu.py [-h] [--host HOST] [--port PORT] [--user USER] [--password PASSWORD]
                    
