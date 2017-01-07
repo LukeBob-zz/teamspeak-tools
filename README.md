@@ -21,15 +21,15 @@
  
  ## Jokebot.py
  
- ** Give it a lits of comments or jokes to read from and set it off, the bot will read through the jokes/comments
- at random untill it has read every one. **
+ **Give it a lits of comments or jokes to read from and set it off, the bot will read through the jokes/comments
+ at random untill it has read every one.**
  
  **Usage**
  
  
  ## adminMenu.py
  
- ** Small admin menu for simple task's like banning, kicking, moving, messaging etc.
+ **Small admin menu for simple task's like banning, kicking, moving, messaging etc.
  Requires host, port, user and password to run**
  
  **Usage**
