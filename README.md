@@ -30,7 +30,17 @@ at random untill it has read every one.**
  
 **Usage**
  
- 
+     user       = 'serveradmin'  # server query password
+     password   = ''             # server query user
+     host       = ''             # server query host
+     port       = 10011          # server query port
+     interval   = 600            # Joke, insult interval - (seconds)
+     jokelist   = ''             # path to joke-list, insult list
+     
+     After opening the Script in a text editor and filling in the above with your info,
+     run it with:
+     
+     ./JokeBot.py
  
  
 ## adminMenu.py
