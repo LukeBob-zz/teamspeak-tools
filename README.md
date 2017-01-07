@@ -10,6 +10,8 @@
      python3 afk-bot.py or chmod 755 afk-bot.py && ./afk-bot.py 
 
 
+
+
 ## Pokebot.py
 
  **Pokebot takes 3 arguments, 'name of target', 'num of times', 'message', it will then connect to the ts3 server and 
@@ -19,12 +21,16 @@
  
      ./pokebot.py <target name> <times to poke> <'message wrapped in quotes'> 
  
+ 
+ 
 ## Jokebot.py
  
 **Give it a lits of comments or jokes to read from and set it off, the bot will read through the jokes/comments
 at random untill it has read every one.**
  
 **Usage**
+ 
+ 
  
  
 ## adminMenu.py
