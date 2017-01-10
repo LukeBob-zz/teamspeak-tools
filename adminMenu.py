@@ -1,9 +1,9 @@
 
+
+
 #!/usr/bin/python3
-#
-# Small Admin menu for Teamspeak 3, Requires ts3 module. "use pip3 install ts3"  
-#
-# Author: LukeBob
+
+# Author: Luke
 
 import argparse
 from time import sleep
@@ -24,6 +24,38 @@ class col:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
     OKBLUE = '\033[94m'
+
+
+class timeFormat():
+    def __init__(self, msec):
+        self.msec = int(msec)
+
+    def seconds(self):
+        seconds = (int(self.msec) / 1000)
+        seconds = int(seconds)
+
+        second = 0
+        minute = 0
+        hour   = 0
+        day    = 0
+
+        for i in range(0, seconds):
+
+            second = (second + 1)
+
+            if second == 60:
+                second = 0
+                minute = (minute + 1)
+
+            if minute == 60:
+                minute = 0
+                hour = (hour + 1)
+
+            if hour == 24:
+                hour = 0
+                day = (day + 1)
+        return ('%s Days %s Hours %s Minutes and %s Seconds'%(day,hour, minute, second))
+
 
 parser = argparse.ArgumentParser(description='Admin pannel for Teamspeak-3')
 parser.add_argument('--host', '-s', help='Server to connect to.')
@@ -64,16 +96,6 @@ def options():
     print(col.FAIL+col.BOLD+r'''             Quit
              ----'''+'\n'+col.ENDC)
 
-def timeFormat(millsec):
-    seconds = (millsec/1000)%60
-    seconds = int(seconds)
-    minutes = (millsec/(1000*60))%60
-    minutes = int(minutes)
-    hours   = (millsec/(1000*60*60))%24
-
-    return("(%d:%d:%d)"%(hours,minutes,seconds))
-
-
 def complainadd(user, reason):
     clientlist = ts3conn.clientlist()
     clientlist = [client for client in clientlist if client["client_type"] != "1"]
@@ -113,11 +135,11 @@ def UserInfo(user):
 
                     idlesec = i['client_idle_time']
                     idlesec = int(idlesec)
-                    print('[#] Client Idle Time        : '+timeFormat(idlesec)+'  [hours:minutes:seconds]')
+                    print('[#] Client Idle Time        : '+timeFormat(idlesec).seconds())
 
                     millsec = i['client_lastconnected']
                     millsec = int(millsec)
-                    print('[#] Client Last Connected   : '+timeFormat(millsec)+'  [hours:minutes:seconds]')
+                    print('[#] Client Last Connected   : '+timeFormat(millsec).seconds())
                     print('[#] Client Total Connections: [%s]'%(i['client_totalconnections']))
                     print('\n\n')
                     sleep(1)
@@ -310,6 +332,10 @@ except KeyboardInterrupt:
         print('\n Terminating Connection \n')
         time.sleep(2)
         exit(0)
+
+
+
+
 
 
 
