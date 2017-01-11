@@ -1,9 +1,10 @@
-
-
-
 #!/usr/bin/python3
+# 
+# Requires ts3 module from https://github.com/benediktschmitt/py-ts3, or 'pip install ts3'
 
-# Author: Luke
+
+
+# Author: LukeBob
 
 import argparse
 from time import sleep
