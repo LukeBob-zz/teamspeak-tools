@@ -1,4 +1,5 @@
- [![Packagist](https://img.shields.io/badge/teamspeak-3.0-blue.svg)]()
+ [![Packagist](https://img.shields.io/badge/teamspeak-3.0-blue.svg)]()  [![Packagist](https://img.shields.io/badge/platform-win--64%20%7C%20linux--64%20%7C%20osx--64-lightgrey.svg)]()
+
 
 
 
