@@ -1,3 +1,7 @@
+ [![Packagist](https://img.shields.io/badge/teamspeak-3.0-blue.svg)]()
+
+
+
 # teamspeak-tools
 
 ## afk-bot.py 
